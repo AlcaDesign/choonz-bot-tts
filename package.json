@@ -2,9 +2,9 @@
   "name": "choonz-bot-tts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "twitch.js",
   "dependencies": {
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "tmi.js": "^1.5.0"
@@ -14,6 +14,7 @@
     "@types/tmi.js": "^1.4.0"
   },
   "scripts": {
+    "start": "node twitch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
