@@ -2,7 +2,8 @@ const {
 	TWITCH_CHAN,
 	TWITCH_NAME,
 	TWITCH_PASS,
-	COMMAND_NAME
+	COMMAND_NAME = '!choon',
+	TTS_COMMAND_NAME = '!tts'
 } = require('dotenv').config().parsed;
 
 const tmi = require('tmi.js');
@@ -31,7 +32,7 @@ client.on('message', async (channel, tags, message, self) => {
 	lastSpoke = now;
 	const { success, shouldTTS, track } = await api.getPlaying();
 	if(success) {
-		client.say(channel, `${shouldTTS ? '!tts' : ''} ${track}`);
+		client.say(channel, `${shouldTTS ? TTS_COMMAND_NAME : ''} ${track}`);
 	}
 });
 
